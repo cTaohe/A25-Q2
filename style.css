@@ -1,0 +1,29 @@
+
+.red, .green, .blue {
+  width: 30px;
+  height: 30px;
+  margin: auto 10px;
+  border-radius: 5px;
+}
+
+.red {  
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.hex-value, .hex-color {
+  width: 50%;
+}
+
+.hex-color {
+  height: 50%;
+  background-color: #000;
+  border: 1px solid #000;
+}

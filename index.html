@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RGB to Hex Converter</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container row m-auto">
+    <!-- rgb form -->
+    <form class="col-6 mt-3 form">
+      <h2>RGB</h2>
+      <!-- red -->
+      <div class="form-group row">
+        <label for="red" class="col-form-label">R:</label>
+        <div class="">
+          <input id="red" type="text" class="form-control m-1" oninput="if(value>255)value=255"
+            onkeyup="value=value.replace(/[^\d]/g,'')" onblur="value=value.replace(/[^\d]/g,'')" placeholder="0-255" />
+        </div>
+        <div class="red"></div>
+      </div>
+      <!-- green -->
+      <div class="form-group row">
+        <label for="green" class="col-form-label">G:</label>
+        <div class="">
+          <input id="green" type="text" class="form-control m-1" oninput="if(value>255)value=255"
+            onkeyup="value=value.replace(/[^\d]/g,'')" onblur="value=value.replace(/[^\d]/g,'')" placeholder="0-255">
+        </div>
+        <div class="green"></div>
+      </div>
+      <!-- blue -->
+      <div class="form-group row">
+        <label for="blue" class="col-form-label">B:</label>
+        <div class="">
+          <input id="blue" type="text" class="form-control m-1" oninput="if(value>255)value=255"
+            onkeyup="value=value.replace(/[^\d]/g,'')" onblur="value=value.replace(/[^\d]/g,'')" placeholder="0-255">
+        </div>
+        <div class="blue"></div>
+      </div>
+      <!-- submit button -->
+      <button type="submit" class="btn btn-primary mb-2 rgb-button">Convert</button>
+    </form>
+
+    <!-- hex value display here -->
+    <div class="hex-panel col-6">
+      <h2>HEX</h2>
+      <input type="text" class="form-control hex-value" value="#000000" readonly>
+      <div class="hex-color mt-3"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
